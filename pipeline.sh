@@ -7,16 +7,15 @@
 ## 3. Ensure that the 'reference' folder contains a reference genome .fna file, renamed as 'reference.fasta'.
 ## 4. The naming and paths mentioned above can be customized as needed.
 
-# Setup the working directory
-INPUT_DIR="/data/input"
-OUTPUT_DIR="/data/output"
-REFERENCE_DIR="/data/reference"
 
 # Work options
 your_input_file_type_is="fastq"
 
-
 ###################################### Please do not modify any of the following code ! #######################################
+# Setup the working directory
+INPUT_DIR="/data/input"
+OUTPUT_DIR="/data/output"
+REFERENCE_DIR="/data/reference"
 
 # Activate conda environment
 export PATH="~/miniconda/bin:$PATH"
