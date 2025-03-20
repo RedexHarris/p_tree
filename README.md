@@ -7,6 +7,6 @@
 5. 将参考基因组文件更名为reference.fasta并放在reference文件夹
 6. 运行run.bat
 ## 做了什么
-基于docker的ubuntu镜像，利用fastp、SPAdes、quast、snippy、gubbins工具完成质量控制、序列拼接、拼接质量评估、突变位点分析和构建进化树。
+基于docker的ubuntu镜像，利用fastp、SPAdes、quast、snippy、gubbins工具，完成**无参拼接后与参考基因组的突变位点分析和构建进化树**，理论上**只适用于细菌序列**。
 ## 怎么看结果
 所有结果文件都在output文件夹，不同插件的输出文件均在其同名文件夹中，SPAdes拼接出来的序列会在fasta文件夹中。
