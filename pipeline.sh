@@ -9,7 +9,7 @@
 
 
 # Work options
-your_input_file_type_is="fastq"
+your_input_file_type_is="fasta"
 
 ###################################### Please do not modify any of the following code ! #######################################
 # Setup the working directory
@@ -90,6 +90,7 @@ cd ${FASTA_DIR}
 ls *.fasta > fasta.list
 conda activate biotools37
 
+: << EOF
 # Run quast for assembly quality evaluate
 echo "################## Running Quast for assembly quality evaluate ##################"
 mkdir -p ${OUTPUT_DIR}/quast
@@ -97,7 +98,6 @@ ls *.fasta > fasta.list
 mapfile -t fastas < fasta.list
 quast.py "${fastas[@]}" -r ${REFERENCE_DIR}/reference.fasta -o ${OUTPUT_DIR}/quast -t 12
 
-: << EOF
 ####################### This code uses refseq_masher to match the best reference genome and download it #######################
 
 echo "Running refseq_masher & Extracting the top match..."
